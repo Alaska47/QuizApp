@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     tools:context="com.akotnana.quizapp.activities.IntroActivity"
     android:orientation="vertical"
     android:background="@color/colorPrimaryDark"
@@ -92,7 +91,7 @@
                 <studio.carbonylgroup.textfieldboxes.ExtendedEditText
                     android:id="@+id/username_edit_text"
                     android:inputType="text"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textColor="@color/colorAccent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -114,7 +113,7 @@
                     android:inputType="textPassword"
                     android:textColor="@color/colorAccent"
                     android:layout_width="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_height="wrap_content"/>
 
             </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
@@ -130,46 +129,12 @@
                 android:layout_marginBottom="15dp"
                 android:layout_gravity="end"/>
 
-            <mehdi.sakout.fancybuttons.FancyButton
-                android:id="@+id/btn_login"
+            <include
+                android:id="@+id/login_layout"
+                layout="@layout/custom_button"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:paddingBottom="15dp"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_defaultColor="@android:color/transparent"
-                fancy:fb_focusColor="@color/colorAccent"
-                fancy:fb_iconPosition="left"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Login"
-                fancy:fb_textSize="18sp"
-                fancy:fb_textColor="#FFFFFF"/>
+                android:layout_height="wrap_content" />
 
-            <mehdi.sakout.fancybuttons.FancyButton
-                android:id="@+id/btn_login_clicked"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:paddingBottom="15dp"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_defaultColor="@color/colorAccent"
-                android:clickable="false"
-                fancy:fb_iconPosition="left"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Login"
-                android:visibility="gone"
-                fancy:fb_textSize="18sp"
-                fancy:fb_textColor="#000000"/>
 
         </LinearLayout>
     </LinearLayout>
