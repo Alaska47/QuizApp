@@ -6,6 +6,7 @@
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
     tools:context="com.akotnana.quizapp.activities.IntroActivity"
     android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
     android:paddingBottom="0dp">
 
     <!--
@@ -40,10 +41,10 @@
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:src="@android:drawable/stat_sys_headset"/>
+                android:src="@mipmap/ic_launcher"/>
 
             <TextView
+                android:id="@+id/logo_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quiz App"
@@ -53,9 +54,11 @@
                 android:textColor="@color/colorAccent"
                 android:layout_marginTop="5dp"/>
             <TextView
+                android:id="@+id/logo_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Login to play"
+                android:layout_marginTop="5dp"
                 android:layout_gravity="center"
                 android:textSize="18sp"
                 android:textColor="@color/colorAccent"/>
@@ -81,6 +84,7 @@
                 android:id="@+id/username_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 app:secondaryColor="@color/blue_grey_300"
                 app:primaryColor="@color/colorAccent"
                 app:labelText="Username">
@@ -88,6 +92,7 @@
                 <studio.carbonylgroup.textfieldboxes.ExtendedEditText
                     android:id="@+id/username_edit_text"
                     android:inputType="text"
+                    android:textSize="20sp"
                     android:textColor="@color/colorAccent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -98,6 +103,7 @@
                 android:id="@+id/password_box"
                 android:layout_width="match_parent"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
                 app:secondaryColor="@color/blue_grey_300"
                 app:primaryColor="@color/colorAccent"
                 android:layout_height="wrap_content"
@@ -108,11 +114,13 @@
                     android:inputType="textPassword"
                     android:textColor="@color/colorAccent"
                     android:layout_width="wrap_content"
+                    android:textSize="20sp"
                     android:layout_height="wrap_content"/>
 
             </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
 
             <TextView
+                android:id="@+id/forgot_password_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Forgot password?"
@@ -127,21 +135,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:paddingBottom="10dp"
+                android:paddingBottom="15dp"
                 android:paddingLeft="20dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="5dp"
                 android:paddingRight="20dp"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 fancy:fb_borderColor="#FFFFFF"
                 fancy:fb_borderWidth="1dp"
                 fancy:fb_defaultColor="@android:color/transparent"
                 fancy:fb_focusColor="@color/colorAccent"
-                fancy:fb_fontIconResource="@string/icon_user"
                 fancy:fb_iconPosition="left"
                 fancy:fb_radius="30dp"
-                fancy:fb_text="Continue"
+                fancy:fb_text="Login"
                 fancy:fb_textSize="18sp"
                 fancy:fb_textColor="#FFFFFF"/>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_login_clicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                fancy:fb_borderColor="#FFFFFF"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/colorAccent"
+                android:clickable="false"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Login"
+                android:visibility="gone"
+                fancy:fb_textSize="18sp"
+                fancy:fb_textColor="#000000"/>
 
         </LinearLayout>
     </LinearLayout>
