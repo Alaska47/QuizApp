@@ -1,0 +1,149 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    tools:context="com.akotnana.quizapp.activities.IntroActivity"
+    android:orientation="vertical"
+    android:paddingBottom="0dp">
+
+    <!--
+    <ImageView
+        android:id="@+id/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background4"
+        android:tint="@color/colorPrimary"
+        android:tintMode="multiply" />
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <!--
+        logo
+        app title
+        -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:src="@android:drawable/stat_sys_headset"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz App"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="48sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login to play"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+
+        <!--
+        username
+        password
+        forgot password
+        login
+        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal">
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/username_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:secondaryColor="@color/blue_grey_300"
+                app:primaryColor="@color/colorAccent"
+                app:labelText="Username">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/username_edit_text"
+                    android:inputType="text"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                android:id="@+id/password_box"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                app:secondaryColor="@color/blue_grey_300"
+                app:primaryColor="@color/colorAccent"
+                android:layout_height="wrap_content"
+                app:labelText="Password">
+
+                <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                    android:id="@+id/password_edit_text"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot password?"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="end"/>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                fancy:fb_borderColor="#FFFFFF"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@android:color/transparent"
+                fancy:fb_focusColor="@color/colorAccent"
+                fancy:fb_fontIconResource="@string/icon_user"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Continue"
+                fancy:fb_textSize="18sp"
+                fancy:fb_textColor="#FFFFFF"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
+
