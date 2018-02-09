@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.akotnana.quizapp.activities.IntroActivity"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    tools:context="com.akotnana.quizapp.activities.LoginActivity"
     android:orientation="vertical"
     android:background="@color/colorPrimaryDark"
     android:paddingBottom="0dp">
@@ -129,11 +130,35 @@
                 android:layout_marginBottom="15dp"
                 android:layout_gravity="end"/>
 
+            <!--
             <include
                 android:id="@+id/login_layout"
                 layout="@layout/custom_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+             -->
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                fancy:fb_borderColor="#FFFFFF"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@android:color/transparent"
+                fancy:fb_focusColor="@color/colorAccent"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Continue"
+                fancy:fb_textSize="18sp"
+                fancy:fb_textColor="#FFFFFF"/>
+
+
 
 
         </LinearLayout>

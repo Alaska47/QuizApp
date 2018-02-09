@@ -2,6 +2,7 @@ package com.akotnana.quizapp.activities;
 
 import android.animation.Animator;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -22,15 +23,15 @@ import com.akotnana.quizapp.utils.FontManager;
 
 import mehdi.sakout.fancybuttons.FancyButton;
 
-public class IntroActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity {
 
-    public final String TAG = "IntroActivity";
+    public final String TAG = "LoginActivity";
 
     TextView logo;
     TextView logoDescription;
     EditText username;
     EditText password;
-    CustomButton login;
+    FancyButton login;
     TextView forgotPassword;
 
 
@@ -44,14 +45,15 @@ public class IntroActivity extends BaseActivity {
         username = (EditText) findViewById(R.id.username_edit_text);
         password = (EditText) findViewById(R.id.password_edit_text);
 
-        login = (CustomButton) findViewById(R.id.login_layout);
-        login.setText("Continue");
+        login = (FancyButton) findViewById(R.id.login_button);
 
-        login.setOnViewTouchedListener(new CustomButton.OnViewTouchedListener() {
+        login.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onViewTouched(boolean clicked) {
-                if(true)
-                    Log.d(TAG, "clicked continue");
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    Intent a = new Intent(LoginActivity.this, MainActivity.class);
+                }
+                return true;
             }
         });
 
