@@ -2,6 +2,7 @@ package com.akotnana.quizapp.activities;
 
 import android.animation.Animator;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBar;
@@ -51,7 +52,22 @@ public class LoginActivity extends BaseActivity {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    Intent a = new Intent(LoginActivity.this, MainActivity.class);
+                    final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
+                            R.style.AppTheme_Dark_Dialog);
+                    progressDialog.setIndeterminate(true);
+                    progressDialog.setCancelable(false);
+                    progressDialog.setMessage("Signing in...");
+                    progressDialog.show();
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressDialog.dismiss();
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }, 1000);
                 }
                 return true;
             }
@@ -60,13 +76,11 @@ public class LoginActivity extends BaseActivity {
 
         forgotPassword = (TextView) findViewById(R.id.forgot_password_textview);
 
-        logo.setTypeface(fontManager.getTypeFace());
-        logoDescription.setTypeface(fontManager.getTypeFace());
-        username.setTypeface(fontManager.getTypeFace());
-        password.setTypeface(fontManager.getTypeFace());
-        forgotPassword.setTypeface(fontManager.getTypeFace());
-
-
+        logo.setTypeface(fontManager.getTypeFaceRegular());
+        logoDescription.setTypeface(fontManager.getTypeFaceRegular());
+        username.setTypeface(fontManager.getTypeFaceRegular());
+        password.setTypeface(fontManager.getTypeFaceRegular());
+        forgotPassword.setTypeface(fontManager.getTypeFaceRegular());
 
     }
 

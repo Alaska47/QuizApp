@@ -13,11 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_weight="5"
+        android:layout_weight="50"
         android:orientation="vertical"
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="35dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,6 +26,7 @@
             android:layout_height="96dp"
             android:src="@drawable/koala"
             app:civ_border_width="2dp"
+            android:layout_marginBottom="12dp"
             app:civ_border_color="#00000000"/>
 
         <TextView
@@ -33,12 +34,13 @@
             android:layout_width="match_parent"
             android:layout_gravity="left"
             android:text="Ashwin Pathi"
+            android:textStyle="bold"
             android:textSize="24sp"
             android:textColor="@color/colorAccent"
-            android:layout_marginTop="5dp"
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/profile_level"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -53,94 +55,101 @@
         android:id="@+id/middle_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
+        android:layout_weight="300"
         android:orientation="vertical"
         android:layout_marginStart="50dp"
         android:layout_gravity="start">
 
-        <Button
-            android:id="@+id/quizes_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:gravity="left"
-            android:background="?attr/selectableItemBackground"
-            android:backgroundTint="@color/colorAccent"
-            android:clickable="true"
-            android:focusable="true"
-            android:paddingBottom="15dp"
-            android:paddingTop="15dp"
-            android:stateListAnimator="@null"
-            android:text="Quizes"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/quizes_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:backgroundTint="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawableLeft="@drawable/ic_view_list_white_24dp"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|left"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"
+                android:text="Quizes"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/profile_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:gravity="left"
-            android:background="?attr/selectableItemBackground"
-            android:backgroundTint="@color/colorAccent"
-            android:clickable="true"
-            android:focusable="true"
-            android:paddingBottom="15dp"
-            android:paddingTop="15dp"
-            android:stateListAnimator="@null"
-            android:text="Profile"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/multiplayer_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:gravity="left"
-            android:background="?attr/selectableItemBackground"
-            android:backgroundTint="@color/colorAccent"
-            android:clickable="true"
-            android:focusable="true"
-            android:paddingBottom="15dp"
-            android:paddingTop="15dp"
-            android:stateListAnimator="@null"
-            android:text="Challenge"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/profile_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:backgroundTint="@color/colorAccent"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|left"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:focusable="true"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"
+                android:text="Profile"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/leaderboard_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:gravity="left"
-            android:background="?attr/selectableItemBackground"
-            android:backgroundTint="@color/colorAccent"
-            android:clickable="true"
-            android:focusable="true"
-            android:paddingBottom="15dp"
-            android:paddingTop="15dp"
-            android:stateListAnimator="@null"
-            android:text="Leaderboard"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/challenge_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:backgroundTint="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawableLeft="@drawable/ic_challenge"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|left"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:stateListAnimator="@null"
+                android:textAllCaps="false"
+                android:text="Challenge"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+
+
+            <Button
+                android:id="@+id/leaderboard_button"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:backgroundTint="@color/colorAccent"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_stars_white_24dp"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|left"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:focusable="true"
+                android:stateListAnimator="@null"
+                android:text="Leaderboard"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
     </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/bottom_layout"
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_height="0.5dp"
-            android:background="@color/grey_400"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -150,75 +159,61 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="10000"
+                android:layout_weight="550"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_settings_white_24dp"
-                    android:tint="@color/grey_400"
-                    android:tintMode="multiply" />
 
                 <Button
                     android:id="@+id/settings_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
-                    android:backgroundTint="@color/colorAccent"
+                    android:backgroundTint="@color/grey_400"
                     android:clickable="true"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="-2dp"
                     android:focusable="true"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
+                    android:drawableLeft="@drawable/ic_settings_white_24dp"
+                    android:drawableTint="@color/colorAccent"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical|left"
                     android:stateListAnimator="@null"
                     android:text="Settings"
+                    android:textAllCaps="false"
                     android:textColor="@color/grey_400"
                     android:textSize="16sp" />
 
             </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_weight="1"
-                android:layout_height="30dp"
-                android:layout_gravity="center_vertical"
-                android:background="@color/grey_400"/>
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="10000"
+                android:layout_weight="550"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:scaleType="centerCrop"
-                    android:tintMode="multiply"
-                    android:tint="@color/grey_400"
-                    android:src="@drawable/ic_keyboard_return_white_24dp" />
-
                 <Button
                     android:id="@+id/log_out_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="-2dp"
                     android:background="?attr/selectableItemBackground"
-                    android:backgroundTint="@color/colorAccent"
+                    android:backgroundTint="@color/grey_400"
                     android:clickable="true"
                     android:focusable="true"
+                    android:drawableLeft="@drawable/ic_exit"
+                    android:drawableTint="@color/colorAccent"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical|left"
                     android:paddingBottom="5dp"
+                    android:textAllCaps="false"
                     android:paddingTop="5dp"
                     android:stateListAnimator="@null"
                     android:text="Log Out"

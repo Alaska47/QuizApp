@@ -9,14 +9,26 @@ import android.graphics.Typeface;
 
 public class FontManager {
     Context context;
-    public static Typeface typeFace;
+    public static Typeface typeFaceLight;
+    public static Typeface typeFaceRegular;
+    public static Typeface typeFaceBold;
 
     public FontManager(Context context) {
         this.context = context;
-        this.typeFace = Typeface.createFromAsset(context.getAssets(),"fonts/Ubuntu-R.ttf");
+        this.typeFaceLight = Typeface.createFromAsset(context.getAssets(),"fonts/Ubuntu-L.ttf");
+        this.typeFaceRegular = Typeface.createFromAsset(context.getAssets(),"fonts/Ubuntu-R.ttf");
+        this.typeFaceBold = Typeface.createFromAsset(context.getAssets(),"fonts/Ubuntu-B.ttf");
     }
 
-    public Typeface getTypeFace() {
-        return this.typeFace;
+    public Typeface getTypeFaceLight() {
+        return this.typeFaceLight;
+    }
+
+    public Typeface getTypeFaceRegular() {
+        return this.typeFaceRegular;
+    }
+
+    public Typeface getTypeFaceBold() {
+        return this.typeFaceBold;
     }
 }
